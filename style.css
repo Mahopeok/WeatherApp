@@ -1,45 +1,56 @@
 body{
-    color: white;
+   
     background-color: #f0f0f0;
     font-family: "Almendra", serif;
   font-weight: 400;
   font-style: normal;
-    margin: 0;
-    padding: 20px;
+   
+
 }
 .container{
-    size: 60%;
-    margin: 0 auto;
-    padding: 20px;
+    color: #fff;
    
-    background-image: url('stormy.jpg');
-    background-repeat: no-repeat;
+background-color: black;
+border-radius: 6px;
    
-    background-size: 80%;
-    background-position: ;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 30px auto;
+    width: 80%
+  
 
 }
 #search-input{
     background-color: #f0f0f0;
     font-family: cursive;
     color:#bbb4b4; 
-    width: 60%;
-    padding: 10px;
+   
+    padding: 20px;
+    margin: 20px 10px 20px 50px;
     border:none;
-    border-radius: 16px;
-    margin-bottom: 20px;
+    border-radius: 30px;
+    font-size: 15px;
+
+   
 }
 #search-button{
     background-color: #007bff;
     color: #fff;
-    padding: 10px 20px;
+    padding: 20px;
     border: none;
-    border-radius: 16px;
     cursor: pointer;
-    font-size: 16px;
+    margin: 20px 10px 20px 0;
+    border:none;
+    border-radius: 30px;
+    font-size: 15px;
 }
 #search-button:hover{
     background-color: #0056b3;
+}
+#search-form{
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 #date-time{
     font-size: 14px;
@@ -47,13 +58,12 @@ body{
     color: #bbb4b4;
 }
 #weather-info{
-    align-items: center;
+
    position: relative;
-   top:-80px;
-   right: -500px;
-  font-weight: bold;
-  font-size: 30px;
+   top: -85px;px;
+   right: -400px;
+  font-size: 35px;
 }
 #weathericon{
-font-size: 50px;
+font-size: 30px;
 }
