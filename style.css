@@ -12,11 +12,14 @@ body{
    
 background-color: black;
 border-radius: 6px;
-   
-    padding: 30px;
+   background-image: url(stormy.jpg);
+   background-repeat: no-repeat;
+   background-size: cover; 
+       padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 30px auto;
-    width: 80%
+    width: 50%
+    
   
 
 }
@@ -26,7 +29,7 @@ border-radius: 6px;
     color:#bbb4b4; 
    
     padding: 20px;
-    margin: 20px 10px 20px 50px;
+    margin: 20px 10px 20px 40px;
     border:none;
     border-radius: 30px;
     font-size: 15px;
@@ -48,9 +51,10 @@ border-radius: 6px;
     background-color: #0056b3;
 }
 #search-form{
+    display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
+ 
 }
 #date-time{
     font-size: 14px;
@@ -58,12 +62,18 @@ border-radius: 6px;
     color: #bbb4b4;
 }
 #weather-info{
-
-   position: relative;
-   top: -85px;px;
-   right: -400px;
+    margin-top: 26px;
+  
   font-size: 35px;
 }
 #weathericon{
-font-size: 30px;
+font-size: 40px;
+}
+#city-value{
+    display: flex;
+    justify-content: space-between ;
+}
+footer{
+    font-size: smaller;
+    color: #bbb4b4;
 }
