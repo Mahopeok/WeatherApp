@@ -1,4 +1,5 @@
 body{
+    color: white;
     background-color: #f0f0f0;
     font-family: "Almendra", serif;
   font-weight: 400;
@@ -7,10 +8,52 @@ body{
     padding: 20px;
 }
 .container{
-    max-width: 800px;
+    size: 60%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
+    background-image: url('stormy.jpg');
+    background-repeat: no-repeat;
+   
+    background-size: 80%;
+    background-position: ;
+
+}
+#search-input{
+    background-color: #f0f0f0;
+    font-family: cursive;
+    color:#bbb4b4; 
+    width: 60%;
+    padding: 10px;
+    border:none;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+#search-button{
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#search-button:hover{
+    background-color: #0056b3;
+}
+#date-time{
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #bbb4b4;
+}
+#weather-info{
+    align-items: center;
+   position: relative;
+   top:-80px;
+   right: -500px;
+  font-weight: bold;
+  font-size: 30px;
+}
+#weathericon{
+font-size: 50px;
 }
