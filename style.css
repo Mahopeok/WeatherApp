@@ -64,10 +64,10 @@ border-radius: 6px;
 #weather-info{
     margin-top: 26px;
   
-  font-size: 35px;
+  font-size: 50px;
 }
 #weathericon{
-font-size: 40px;
+font-size: 50px;
 }
 #city-value{
     display: flex;
