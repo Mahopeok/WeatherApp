@@ -61,7 +61,7 @@ border-radius: 6px;
     margin-bottom: 20px;
     color: #bbb4b4;
 }
-#weather-info{
+.weather-info{
     margin-top: 26px;
   
   font-size: 50px;

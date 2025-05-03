@@ -7,14 +7,20 @@ function displayweather(response) {
     let temperatureElement = document.querySelector("#temperature-value");
     let temperature = Math.round(response.data.temperature.current);
     let city = document.querySelector("#display-city");
-    city.innerHTML = response.data.city;
-    temperatureElement.innerHTML = `${temperature}`;
     let description = document.querySelector("#description");
-    description.innerHTML = response.data.condition.description;
     let humidityElement = document.querySelector("#Humidity");
-    humidityElement.innerHTML = response.data.temperature.humidity;
+
     let windSpeedElement = document.querySelector("#wind-speed");
+    let iconElement = document.querySelector("#weather-icon");
+
+
+   
+    temperatureElement.innerHTML = `${temperature}`;
+    city.innerHTML = response.data.city;
+    description.innerHTML = response.data.condition.description;
+    humidityElement.innerHTML = response.data.temperature.humidity;
     windSpeedElement.innerHTML = Math.round(response.data.wind.speed);
+    iconElement.innerHtml = `<img src="${response.data.condition.icon_url}" class="weather-info"/>`;
     console.log(response.data);
 }
 
@@ -30,7 +36,7 @@ function search(event){
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", search);
 searchCity("Abuja");
-
+function formatDate(currentDate){
 let now = new Date();
 let minute = now.getMinutes();
 let hour = now.getHours()
@@ -41,3 +47,4 @@ let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct
 let month = months[now.getMonth()];
 let dateTimeElement = document.querySelector("#date-time");
 dateTimeElement.innerHTML = `${day}, ${date} ${month} ${hour}:${minute}`;
+}
