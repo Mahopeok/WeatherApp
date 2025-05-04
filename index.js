@@ -11,7 +11,8 @@ function displayweather(response) {
     let humidityElement = document.querySelector("#humidity");
     let windSpeedElement = document.querySelector("#wind-speed");
     let iconElement = document.querySelector("#icon");
-
+    let dateTimeElement = document.querySelector("#date-time");
+    let date = new Date(response.data.time * 1000);
 
    
     temperatureElement.innerHTML = `${temperature}`;
@@ -20,10 +21,8 @@ function displayweather(response) {
     humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
     windSpeedElement.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
     iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-info"/>`;
-        }
-
-
-
+    dateTimeElement.innerHTML = formatDate(date);
+}
 
 function search(event){
     event.preventDefault(); 
@@ -38,16 +37,16 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", search);
 searchCity("Abuja");
 
-function formatDate() {
-let now = new Date();
-let minute = now.getMinutes();
-let hour = now.getHours();
-let date = now.getDate();
-let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
-let day = days[now.getDay()]
-let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-let month = months[now.getMonth()];
-let dateTimeElement = document.querySelector("#date-time");
-dateTimeElement.innerHTML = `${day}, ${date} ${month} ${hour}:${minute}`;
+function formatDate(date) {
+
+let minute = date.getMinutes();
+let hour = date.getHours();
+if (minute < 10) {
+    minute = `0${minute}`;
 }
-formatDate();
+let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+let day = days[date.getDay()];
+
+
+return `${day} ${hour}:${minute}`;
+}
