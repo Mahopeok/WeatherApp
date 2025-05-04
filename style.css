@@ -62,16 +62,35 @@ border-radius: 6px;
     color: #bbb4b4;
 }
 .weather-info{
-    margin-top: 26px;
-  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
   font-size: 50px;
 }
-#weathericon{
+#icon{
+    display: inline;
 font-size: 50px;
 }
 #city-value{
     display: flex;
     justify-content: space-between ;
+}
+
+#description{
+    font-size: 20px;
+    margin-top: 10px;
+    color: #bbb4b4;
+}
+#humidity{
+    font-size: 20px;
+    margin-top: 10px;
+    color: #fc0909;
+}
+#wind-speed{
+    font-size: 20px;
+    margin-top: 10px;
+    color: #fc0909;
 }
 footer{
     font-size: smaller;
